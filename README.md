@@ -21,6 +21,7 @@ python3 -m http.server 8000   # then visit http://localhost:8000
 | 4. Facility Map | `map.html` | Interactive site plan from the master plan — click any ground or facility for details |
 | 5. Event Gallery | `gallery.html` | Filterable picture gallery with a keyboard-accessible lightbox |
 | 6. Facility Features | `features.html` | Grounds, pitches, nets, dugouts, clubhouse, plaza and desert-smart design |
+| 7. Stay & Explore | `travel.html` | Top 10 budget hotels and top 10 resorts near Casa Grande (sortable), tour vendors, nearby sights, trip-planning request |
 
 ## Hosting (GitHub Pages)
 
@@ -39,6 +40,7 @@ Almost everything you'll want to change is in **`js/site-config.js`**:
 
 - `address`, `phone`, `email`, `hours` — **these are placeholders; replace them with the real details.**
 - `fields`, `addOns`, `packages` — reservation pricing (example rates; confirm before launch).
+- `js/travel-data.js` — hotels, resorts, tour vendors and sights (ratings as of October 2026; refresh periodically).
 - `events` — calendar entries (`YYYY-MM-DD`, type `tournament | academy | community | maintenance`).
 
 ## Images
