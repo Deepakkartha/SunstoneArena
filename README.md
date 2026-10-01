@@ -24,15 +24,14 @@ python3 -m http.server 8000   # then visit http://localhost:8000
 
 ## Hosting (GitHub Pages)
 
-`.github/workflows/pages.yml` publishes the site to GitHub Pages on every push to `main`.
+`.github/workflows/pages.yml` publishes the site to GitHub Pages on every push to `main`:
+**https://deepakkartha.github.io/SunstoneArena/**
 
-- Site address: **https://sunstonesportsarena.az.com** (the `CNAME` file holds the domain)
-- One-time setup in the repo's **Settings › Pages**: set **Source** to **GitHub Actions**,
-  enter `sunstonesportsarena.az.com` under **Custom domain**, and tick **Enforce HTTPS** once
-  the certificate is issued.
-- DNS: whoever manages DNS for `az.com` must add a `CNAME` record for
-  `sunstonesportsarena` pointing to `deepakkartha.github.io`.
-- To change the domain later, update `CNAME` and the `canonical` / `og:` URLs in each page's `<head>`.
+One-time setup: in the repo's **Settings › Pages**, set **Source** to **GitHub Actions**.
+
+To move to a custom domain later (e.g. `sunstonesportsarena.com`): buy the domain, point its
+DNS at GitHub Pages, add a `CNAME` file containing the domain (and copy it into `_site` in the
+workflow), set it under Settings › Pages, and update the `canonical` / `og:` URLs in each page's `<head>`.
 
 ## Editing content
 
