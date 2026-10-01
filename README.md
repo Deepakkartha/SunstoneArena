@@ -22,6 +22,15 @@ python3 -m http.server 8000   # then visit http://localhost:8000
 | 5. Event Gallery | `gallery.html` | Filterable picture gallery with a keyboard-accessible lightbox |
 | 6. Facility Features | `features.html` | Grounds, pitches, nets, dugouts, clubhouse, plaza and desert-smart design |
 
+## Hosting (GitHub Pages)
+
+`.github/workflows/pages.yml` publishes the site to GitHub Pages on every push to `main`:
+**https://deepakkartha.github.io/SunstoneArena/**
+
+If the first run fails at "configure-pages", open the repo's **Settings › Pages** and set
+**Source** to **GitHub Actions**, then re-run the workflow. For a custom domain, add it under
+Settings › Pages and update the `canonical` / `og:` URLs in each page's `<head>`.
+
 ## Editing content
 
 Almost everything you'll want to change is in **`js/site-config.js`**:
