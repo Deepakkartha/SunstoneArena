@@ -13,6 +13,7 @@
     ["map.html", "Facility Map"],
     ["gallery.html", "Gallery"],
     ["features.html", "Features"],
+    ["travel.html", "Stay & Explore"],
   ];
   const current = location.pathname.split("/").pop() || "index.html";
 

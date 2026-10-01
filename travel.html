@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stay &amp; Explore | Sunstone Sports Arena</title>
+  <meta name="description" content="Top-rated budget hotels and high-end resorts near Casa Grande between Phoenix and Tucson, plus sightseeing tours and a trip-planning request for visiting teams.">
+  <link rel="canonical" href="https://deepakkartha.github.io/SunstoneArena/travel.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sunstone Sports Arena">
+  <meta property="og:title" content="Stay &amp; Explore | Sunstone Sports Arena">
+  <meta property="og:description" content="Top-rated budget hotels and high-end resorts near Casa Grande between Phoenix and Tucson, plus sightseeing tours and a trip-planning request for visiting teams.">
+  <meta property="og:url" content="https://deepakkartha.github.io/SunstoneArena/travel.html">
+  <meta property="og:image" content="https://deepakkartha.github.io/SunstoneArena/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#4A1B0C">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow" style="color:var(--sun)">07 · Stay &amp; Explore</p>
+        <h1>Stay &amp; explore around Casa Grande</h1>
+        <p>Sunstone sits where Interstates 8 and 10 meet, about an hour from both Phoenix and Tucson. Find a budget hotel or a high-end resort, book a sightseeing tour, or ask us to plan your team's trip.</p>
+      </div>
+      <svg class="mesa" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 L0 40 L120 40 L150 18 L330 18 L360 44 L620 44 L650 10 L860 10 L890 38 L1100 38 L1130 22 L1300 22 L1330 46 L1440 46 L1440 70 Z" fill="#FBFAF6"/></svg>
+    </section>
+
+    <section class="section" id="hotels">
+      <div class="container">
+        <p class="eyebrow">Where to stay</p>
+        <h2>Top 10 hotels &amp; resorts</h2>
+        <p class="lead">Ranked by guest rating. Budget picks are in and around Casa Grande; resorts span the corridor from Chandler to Tucson.</p>
+
+        <div class="travel-controls">
+          <div class="filter-bar" id="hotel-tabs" role="tablist" aria-label="Hotel category" style="justify-content:flex-start;margin:0">
+            <button type="button" class="on" role="tab" aria-selected="true" data-tab="budget">Good budget hotels</button>
+            <button type="button" role="tab" aria-selected="false" data-tab="resorts">High-end resorts</button>
+          </div>
+          <label class="sort">Sort by
+            <select id="hotel-sort">
+              <option value="rating">Guest rating</option>
+              <option value="miles">Distance from arena</option>
+            </select>
+          </label>
+        </div>
+
+        <ol class="hotel-list" id="hotel-list"></ol>
+        <p class="note" id="hotel-note"></p>
+      </div>
+    </section>
+
+    <section class="section alt" id="tours">
+      <div class="container">
+        <p class="eyebrow">Sightseeing</p>
+        <h2>Tour &amp; travel planner vendors</h2>
+        <p class="lead">Local and Phoenix-based operators for desert jeep trips, day tours and multi-day itineraries. Book directly with the vendor.</p>
+        <div class="map-filters" id="vendor-filters" role="group" aria-label="Filter vendors" style="margin-top:20px"></div>
+        <div class="grid grid-3" id="vendor-list"></div>
+      </div>
+    </section>
+
+    <section class="section" id="sights">
+      <div class="container">
+        <p class="eyebrow">Worth the drive</p>
+        <h2>Nearby sights</h2>
+        <div class="grid grid-4" id="sight-list" style="margin-top:24px"></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="plan">
+      <div class="container">
+        <p class="eyebrow">Trip planner</p>
+        <h2>Let us plan your team's trip</h2>
+        <div class="book-layout" style="margin-top:20px">
+          <form class="form card" id="trip-form" novalidate>
+            <div class="row">
+              <div><label for="t-arrive">Arrival</label><input type="date" id="t-arrive"></div>
+              <div><label for="t-depart">Departure</label><input type="date" id="t-depart"></div>
+            </div>
+            <div class="row">
+              <div><label for="t-size">Group size</label><input type="number" id="t-size" min="1" value="15"></div>
+              <div><label for="t-stay">Accommodation</label>
+                <select id="t-stay"><option>Good budget hotel</option><option>High-end resort</option><option>Mix / not sure</option><option>No hotel needed</option></select>
+              </div>
+            </div>
+            <div>
+              <label>Interested in</label>
+              <div class="checks" id="t-interests">
+                <label><input type="checkbox" value="Desert jeep tour"> Desert jeep tour</label>
+                <label><input type="checkbox" value="Grand Canyon / Sedona day trip"> Grand Canyon / Sedona day trip</label>
+                <label><input type="checkbox" value="Tucson sights"> Tucson sights</label>
+                <label><input type="checkbox" value="Phoenix sights"> Phoenix sights</label>
+                <label><input type="checkbox" value="Golf"> Golf</label>
+                <label><input type="checkbox" value="Airport transfers"> Airport transfers</label>
+              </div>
+            </div>
+            <div class="row">
+              <div><label for="t-name">Your name</label><input id="t-name" autocomplete="name" required></div>
+              <div><label for="t-email">Email</label><input type="email" id="t-email" autocomplete="email" required></div>
+            </div>
+            <div><label for="t-notes">Notes</label><textarea id="t-notes" rows="3" placeholder="Tournament dates, budget per night, dietary needs…"></textarea></div>
+            <div id="trip-msg" role="status" aria-live="polite"></div>
+            <div><button class="btn" type="submit">Send trip request</button></div>
+          </form>
+          <aside class="info-panel">
+            <h3>Getting here</h3>
+            <dl>
+              <div><dt>Phoenix Sky Harbor (PHX)</dt><dd>~50 mi</dd></div>
+              <div><dt>Phoenix–Mesa Gateway (AZA)</dt><dd>~45 mi</dd></div>
+              <div><dt>Tucson International (TUS)</dt><dd>~70 mi</dd></div>
+            </dl>
+            <p style="margin-top:16px">Sunstone is just off the I-8 / I-10 junction in Casa Grande. Distances are approximate driving miles.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="js/site-config.js"></script>
+  <script src="js/travel-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/travel.js"></script>
+</body>
+</html>
