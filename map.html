@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Facility Map | Sunstone Sports Arena</title>
+  <meta name="description" content="Interactive site map of Sunstone Sports Arena: ten cricket grounds, practice nets, clubhouse, parking and plaza.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow" style="color:var(--sun)">04 · Facility Map</p>
+        <h1>Find your way around</h1>
+        <p>65 acres, 760 × 414 yards: ten grounds in two rows of five, with the clubhouse, nets, parking and plaza along the southern facilities strip. Tap any area for details.</p>
+      </div>
+      <svg class="mesa" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 L0 40 L120 40 L150 18 L330 18 L360 44 L620 44 L650 10 L860 10 L890 38 L1100 38 L1130 22 L1300 22 L1330 46 L1440 46 L1440 70 Z" fill="#FBFAF6"/></svg>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="map-filters" id="map-filters" role="group" aria-label="Highlight areas"></div>
+        <div class="map-layout">
+          <div class="site-map" id="site-map"></div>
+          <div class="card map-info" id="map-info" aria-live="polite">
+            <span class="tag" id="info-tag">Site</span>
+            <h3 id="info-title" style="margin-top:10px">Sunstone Sports Arena</h3>
+            <p id="info-desc">Select a ground or facility on the map to learn more.</p>
+            <p id="info-link"></p>
+            <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+            <h4 style="font-family:var(--sans);margin-bottom:8px">Legend</h4>
+            <ul class="map-legend">
+              <li><i style="background:#3B6D11"></i>Cricket ground (65 × 70 yd)</li>
+              <li><i style="background:#FAC775"></i>Natural clay pitch</li>
+              <li><i style="background:#1D9E75"></i>Astro turf pitch</li>
+              <li><i style="background:#185FA5"></i>Home dugout</li>
+              <li><i style="background:#993C1D"></i>Away dugout</li>
+              <li><i style="background:#fff"></i>Concrete cart paths</li>
+              <li><i style="background:#B4B2A9"></i>Access road</li>
+              <li><i style="background:#D85A30"></i>Clubhouse</li>
+              <li><i style="background:#F1EFE8"></i>Covered practice nets</li>
+              <li><i style="background:#B5D4F4"></i>Storm basin</li>
+              <li><i style="background:#D3D1C7"></i>Parking (250 cars)</li>
+              <li><i style="background:#EFE3CF"></i>Presentation plaza</li>
+              <li><i style="background:#EADCBD"></i>Desert landscape</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note" style="margin-top:14px">North is up. Plan based on the Sunstone master plan; final layout may vary.</p>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="js/site-config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

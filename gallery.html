@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Event Gallery | Sunstone Sports Arena</title>
+  <meta name="description" content="Pictures from tournaments, academy camps and community days at Sunstone Sports Arena.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow" style="color:var(--sun)">05 · Event Gallery</p>
+        <h1>Moments from the middle</h1>
+        <p>Cover drives at sunset, final-over finishes, trophy lifts and family days on the plaza. Tap any picture to view it full size.</p>
+      </div>
+      <svg class="mesa" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 L0 40 L120 40 L150 18 L330 18 L360 44 L620 44 L650 10 L860 10 L890 38 L1100 38 L1130 22 L1300 22 L1330 46 L1440 46 L1440 70 Z" fill="#FBFAF6"/></svg>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar" id="gallery-filter" role="group" aria-label="Filter pictures">
+          <button type="button" class="on" data-filter="all">All</button>
+          <button type="button" data-filter="tournament">Tournaments</button>
+          <button type="button" data-filter="academy">Academy</button>
+          <button type="button" data-filter="community">Community</button>
+          <button type="button" data-filter="venue">The Venue</button>
+        </div>
+        <!-- To add real photos: drop files in images/gallery/ and copy a <figure> below. -->
+        <div class="gallery" id="gallery">
+          <figure data-cat="tournament"><img src="images/gallery/cover-drive.svg" alt="Batter playing a cover drive at sunset" loading="lazy"><figcaption>Cover drive at golden hour<small>Desert Cup T20</small></figcaption></figure>
+          <figure data-cat="tournament"><img src="images/gallery/opening-spell.svg" alt="Opening bowler silhouetted against the setting sun" loading="lazy"><figcaption>The opening spell<small>Desert Cup T20</small></figcaption></figure>
+          <figure data-cat="community"><img src="images/gallery/trophy.svg" alt="Trophy presentation on the plaza stage" loading="lazy"><figcaption>Trophy lift on the plaza<small>Desert Cup Final</small></figcaption></figure>
+          <figure data-cat="academy"><img src="images/gallery/nets.svg" alt="Junior batters training in the covered nets" loading="lazy"><figcaption>Juniors in the covered nets<small>Junior Academy</small></figcaption></figure>
+          <figure data-cat="tournament"><img src="images/gallery/wicket.svg" alt="Stumps shattered and bails flying" loading="lazy"><figcaption>Timber!<small>Saguaro Super Sixes</small></figcaption></figure>
+          <figure data-cat="venue"><img src="images/gallery/monsoon.svg" alt="Monsoon storm over the grounds with pitch covers on" loading="lazy"><figcaption>Monsoon rolls in, covers on<small>Ground 4</small></figcaption></figure>
+          <figure data-cat="tournament"><img src="images/gallery/diving-catch.svg" alt="Fielder taking a diving catch" loading="lazy"><figcaption>Full-stretch catch at point<small>Inter-Club Championship</small></figcaption></figure>
+          <figure data-cat="community"><img src="images/gallery/moonlight-six.svg" alt="Batter hitting a lofted six under the moon" loading="lazy"><figcaption>Six under a desert moon<small>New Year's Eve Sixes</small></figcaption></figure>
+          <figure data-cat="community"><img src="images/gallery/family-day.svg" alt="Kids and parents playing cricket together" loading="lazy"><figcaption>Everyone gets a bat<small>Family Cricket Day</small></figcaption></figure>
+          <figure data-cat="venue"><img src="images/gallery/clubhouse.svg" alt="The clubhouse and viewing terrace at sunset" loading="lazy"><figcaption>Clubhouse terrace at sunset<small>The Venue</small></figcaption></figure>
+          <figure data-cat="academy"><img src="images/gallery/keeper.svg" alt="Batter pulling with the wicketkeeper crouched behind" loading="lazy"><figcaption>Keeper's view<small>Winter Academy Camp</small></figcaption></figure>
+          <figure data-cat="venue"><img src="images/hero-batter.svg" alt="Batter at sunset in front of the mesas" loading="lazy"><figcaption>Mesas on the skyline<small>Ground 1</small></figcaption></figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Picture viewer">
+    <button type="button" class="lb-close" aria-label="Close">×</button>
+    <button type="button" class="lb-prev" aria-label="Previous picture">‹</button>
+    <figure><img id="lb-img" src="" alt=""><figcaption id="lb-cap"></figcaption></figure>
+    <button type="button" class="lb-next" aria-label="Next picture">›</button>
+  </div>
+
+  <footer id="site-footer"></footer>
+  <script src="js/site-config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
