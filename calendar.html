@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendar | Sunstone Sports Arena</title>
+  <meta name="description" content="Tournaments, academy camps, community days and ground closures at Sunstone Sports Arena.">
+  <link rel="canonical" href="https://deepakkartha.github.io/SunstoneArena/calendar.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sunstone Sports Arena">
+  <meta property="og:title" content="Calendar | Sunstone Sports Arena">
+  <meta property="og:description" content="Tournaments, academy camps, community days and ground closures at Sunstone Sports Arena.">
+  <meta property="og:url" content="https://deepakkartha.github.io/SunstoneArena/calendar.html">
+  <meta property="og:image" content="https://deepakkartha.github.io/SunstoneArena/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#4A1B0C">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow" style="color:var(--sun)">03 · Calendar</p>
+        <h1>What's on at Sunstone</h1>
+        <p>Tournaments, academy camps, community days and maintenance closures. Select a day to see details or book an open slot.</p>
+      </div>
+      <svg class="mesa" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 L0 40 L120 40 L150 18 L330 18 L360 44 L620 44 L650 10 L860 10 L890 38 L1100 38 L1130 22 L1300 22 L1330 46 L1440 46 L1440 70 Z" fill="#FBFAF6"/></svg>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cal-head">
+          <h2 id="cal-title">Month</h2>
+          <div class="cal-nav">
+            <button type="button" id="prev" aria-label="Previous month">‹ Prev</button>
+            <button type="button" id="today">Today</button>
+            <button type="button" id="next" aria-label="Next month">Next ›</button>
+          </div>
+        </div>
+        <div class="map-filters" id="type-filters" role="group" aria-label="Filter events by type"></div>
+        <div class="cal-grid" id="cal-grid"></div>
+        <div class="legend">
+          <span><i style="background:var(--clay)"></i>Tournament</span>
+          <span><i style="background:var(--sky)"></i>Academy</span>
+          <span><i style="background:var(--sage)"></i>Community</span>
+          <span><i style="background:#6b6a66"></i>Maintenance</span>
+          <span><i style="background:var(--turq)"></i>Your booking request</span>
+        </div>
+
+        <div class="day-detail card" id="day-detail" style="box-shadow:none">
+          <h3 id="day-title">Select a day</h3>
+          <ul class="event-list" id="day-events"></ul>
+          <p style="margin-top:16px"><a class="btn btn-sm" id="day-book" href="reservations.html#book">Book this day</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <p class="eyebrow">Upcoming</p>
+        <h2>Next events</h2>
+        <ul class="event-list" id="upcoming-list" style="margin-top:20px"></ul>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="js/site-config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/calendar.js"></script>
+</body>
+</html>
